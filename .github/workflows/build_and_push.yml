@@ -19,10 +19,10 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restore dependencies
-        run: dotnet restore ./src/services/Jetwise.Services.Booking.csproj
+        run: dotnet restore ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking.csproj
 
       - name: Build the solution
-        run: dotnet build ./src/services/Jetwise.Services.Booking --configuration Release
+        run: dotnet build ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking --configuration Release
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
