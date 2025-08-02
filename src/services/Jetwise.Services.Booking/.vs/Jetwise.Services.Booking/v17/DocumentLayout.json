@@ -4,10 +4,6 @@
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\Sandbox\\Jetwise\\jetwise\\.github\\workflows\\build_and_push.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,12 +13,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -31,26 +23,9 @@
               "RelativeDocumentMoniker": "..\\..\\..\\.github\\workflows\\build_and_push.yml",
               "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\.github\\workflows\\build_and_push.yml",
               "RelativeToolTip": "..\\..\\..\\.github\\workflows\\build_and_push.yml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-08-02T16:18:49.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Dockerfile",
-              "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Dockerfile",
-              "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Dockerfile",
-              "RelativeToolTip": "Jetwise.Services.Booking\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-02T16:18:21.685Z",
               "EditorCaption": ""
             }
           ]

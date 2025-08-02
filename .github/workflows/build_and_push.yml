@@ -31,7 +31,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }} 
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }} ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }} ./src/services/Jetwise.Services.Booking
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}
