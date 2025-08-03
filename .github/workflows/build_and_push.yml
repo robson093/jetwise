@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+      
+      - name: Check user
+        run: whoami
 
       - name: Set up .NET SDK
         uses: actions/setup-dotnet@v3
