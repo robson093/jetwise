@@ -42,3 +42,5 @@ jobs:
 
       - name: Deploy to k3s
         run: kubectl apply -f deploy/k8s.yaml
+        env:
+          KUBECONFIG: /etc/rancher/k3s/k3s.yaml
