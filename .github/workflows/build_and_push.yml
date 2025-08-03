@@ -44,6 +44,6 @@ jobs:
           sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}|" deploy/k8s.yaml
 
       - name: Deploy to k3s
-        run: kubectl apply -f deploy/k8s.yaml
+        run: sudo kubectl apply -f deploy/k8s.yaml
         env:
           KUBECONFIG: /etc/rancher/k3s/k3s.yaml
