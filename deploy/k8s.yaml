@@ -16,7 +16,7 @@ spec:
         - name: booking
           image: robson93/jetwise.services.booking:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
@@ -28,6 +28,7 @@ spec:
     app: booking-service
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 80          # zostaje jako zewnętrzny port (może być 80)
+      targetPort: 8080  # musi wskazywać na port aplikacji w kontenerze!
+      nodePort: 32304   # tylko jeśli potrzebujesz konkretnego NodePort
   type: NodePort
