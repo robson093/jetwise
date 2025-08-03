@@ -17,6 +17,7 @@ spec:
           image: robson93/jetwise.services.booking:latest
           ports:
             - containerPort: 80
+          imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
 kind: Service
