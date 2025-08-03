@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -30,19 +34,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Jetwise.Services.Booking\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T14:46:57.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Properties\\launchSettings.json",
               "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Properties\\launchSettings.json",
               "RelativeToolTip": "Jetwise.Services.Booking\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-02T18:39:06.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Jetwise.Services.Booking.csproj",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj",
@@ -54,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Program.cs",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Program.cs",
@@ -66,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "build_and_push.yml",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\.github\\workflows\\build_and_push.yml",
               "RelativeDocumentMoniker": "..\\..\\..\\.github\\workflows\\build_and_push.yml",

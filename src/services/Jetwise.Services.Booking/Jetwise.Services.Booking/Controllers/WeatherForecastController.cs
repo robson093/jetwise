@@ -29,5 +29,17 @@ namespace Jetwise.Services.Booking.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("{id}")]
+        public WeatherForecast GetById(int id)
+        {
+            return new WeatherForecast
+            {
+                Id = id,
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(1)),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            };
+        }
     }
 }
