@@ -43,7 +43,13 @@ jobs:
         run: |
           sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}|" deploy/k8s.yaml
 
-      - name: Deploy to k3s
-        run: sudo kubectl apply -f deploy/k8s.yaml
+      - name: Show kubeconfig content
+        run: cat /etc/rancher/k3s/k3s.yaml
+
+      - name: Test kubectl cluster-info
+        run: kubectl cluster-info
         env:
           KUBECONFIG: /etc/rancher/k3s/k3s.yaml
+
+      - name: Deploy with kubeconfig explicit and validation off
+        run: kubectl apply --validate=false -f deploy/k8s.yaml --kubeconfig=/etc/rancher/k3s/k3s.yaml
