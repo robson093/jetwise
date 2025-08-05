@@ -16,7 +16,7 @@ namespace Jetwise.Services.Booking.Controllers
             this.documentsService = documentsService;
         }
 
-        [HttpGet(Name = "GetSampleDocuments")]
+        [HttpGet(Name = "GetSampleDocuments")] 
         public async Task<IActionResult> Get()
         {
             return Ok(await documentsService.GetAllAsync());
