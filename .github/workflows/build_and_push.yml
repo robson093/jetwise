@@ -79,12 +79,23 @@ jobs:
       #   run: sudo cat /etc/rancher/k3s/k3s.yaml
 
       - name: Test kubectl cluster-info
-        run: sudo kubectl cluster-info
+        run: kubectl cluster-info
         env:
           KUBECONFIG: /etc/rancher/k3s/k3s.yaml
 
+      - name: Create MongoDB secret from GitHub secrets
+        run: |
+          sudo kubectl create secret generic mongo-secret \
+            --from-literal=MONGO_INITDB_ROOT_USERNAME=${{ secrets.MONGO_USER }} \
+            --from-literal=MONGO_INITDB_ROOT_PASSWORD=${{ secrets.MONGO_PASS }} \
+            --dry-run=client -o yaml | kubectl apply -f - 
+      
+      - name: Deploy mongo db
+        run: |
+          kubectl apply -f deploy/db.mongo.yaml 
+
       - name: Deploy with sudo and kubeconfig
         run: |
-          sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl apply -f deploy/services.booking.yaml 
-          sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl apply -f deploy/services.gateway.yaml 
+          kubectl apply -f deploy/services.booking.yaml 
+          kubectl apply -f deploy/services.gateway.yaml 
         
