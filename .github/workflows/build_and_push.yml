@@ -79,7 +79,7 @@ jobs:
       #   run: sudo cat /etc/rancher/k3s/k3s.yaml
 
       - name: Test kubectl cluster-info
-        run: kubectl cluster-info
+        run: sudo kubectl cluster-info
         env:
           KUBECONFIG: /etc/rancher/k3s/k3s.yaml
 
