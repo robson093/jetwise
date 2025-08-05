@@ -22,10 +22,24 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restore dependencies
-        run: dotnet restore ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking/Jetwise.Services.Booking.csproj
+        run: |
+          for proj in \
+            ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking/Jetwise.Services.Booking.csproj \
+            ./src/services/Jetwise.Services.Gateway/Jetwise.Services.Gateway/Jetwise.Services.Gateway.csproj
+          do
+            echo "Restoring $proj"
+            dotnet restore "$proj"
+          done
 
       - name: Build the solution
-        run: dotnet build ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking/Jetwise.Services.Booking.csproj --configuration Release
+        run: |
+          for proj in \
+            ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking/Jetwise.Services.Booking.csproj \
+            ./src/services/Jetwise.Services.Gateway/Jetwise.Services.Gateway/Jetwise.Services.Gateway.csproj
+          do
+            echo "Building $proj"
+            dotnet build "$proj" --configuration Release
+          done
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3  
@@ -33,18 +47,36 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }} ./src/services/Jetwise.Services.Booking
+      - name: Build and push Docker images
+        run: |
+          for service in booking gateway; 
+          do
+            IMAGE_NAME=jetwise.services.$service
+            IMAGE_TAG=${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:${{ github.sha }}
+            
+            echo "Building $IMAGE_NAME"
+            docker build -t $IMAGE_TAG ./src/services/Jetwise.Services.$(tr '[:lower:]' '[:upper:]' <<< ${service:0:1})${service:1}/Jetwise.Services.$(tr '[:lower:]' '[:upper:]' <<< ${service:0:1})${service:1}
 
-      - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}
+            echo "Pushing $IMAGE_NAME"
+            docker push $IMAGE_TAG
 
+            echo "Updating manifest for $IMAGE_NAME"
+            sed -i "s|image: .*/$IMAGE_NAME:.*|image: $IMAGE_TAG|" deploy/services.$service.yaml
+          done
+
+      # - name: Build Docker image
+      #   run: docker build -t ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }} ./src/services/Jetwise.Services.Booking
+
+      # - name: Push Docker image
+      #   run: docker push ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}
+      
       - name: Replace image tag in manifest
         run: |
-          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}|" deploy/k8s.yaml
+          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}|" deploy/booking_k8s.yaml
+          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jetwise.services.gateway:${{ github.sha }}|" deploy/gateway_k8s.yaml
 
-      - name: Show kubeconfig content
-        run: sudo cat /etc/rancher/k3s/k3s.yaml
+      # - name: Show kubeconfig content
+      #   run: sudo cat /etc/rancher/k3s/k3s.yaml
 
       - name: Test kubectl cluster-info
         run: sudo kubectl cluster-info
@@ -52,5 +84,7 @@ jobs:
           KUBECONFIG: /etc/rancher/k3s/k3s.yaml
 
       - name: Deploy with sudo and kubeconfig
-        run: sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl apply -f deploy/k8s.yaml 
+        run: |
+          sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl apply -f deploy/booking_k8s.yaml 
+          sudo KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl apply -f deploy/gateway_k8s.yaml 
         

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-service
+  template:
+    metadata:
+      labels:
+        app: gateway-service
+    spec:
+      containers:
+        - name: gateway
+          image: robson93/jetwise.services.gateway:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway-service
+spec:
+  selector:
+    app: gateway-service
+  ports:
+    - protocol: TCP
+      port: 80          # zostaje jako zewnętrzny port (może być 80)
+      targetPort: 8080  # musi wskazywać na port aplikacji w kontenerze!
+      nodePort: 32305   # tylko jeśli potrzebujesz konkretnego NodePort
+  type: NodePort

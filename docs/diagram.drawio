@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.0.4">
+  <diagram name="Strona-1" id="gSV7rUxpLoDCu4aDhNh0">
+    <mxGraphModel dx="1369" dy="716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-1" value="Client" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-2" value="Gateway" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="120" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-3" value="Search Service&lt;div&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr data-end=&quot;2135&quot; data-start=&quot;2051&quot;&gt;&lt;td data-col-size=&quot;sm&quot; data-end=&quot;2105&quot; data-start=&quot;2071&quot;&gt;Filtrowanie, cache wyników, geo CQRS, Redis, ElasticSearch&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="10" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-5" value="AuthService" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="10" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-6" value="Booking ServiceProces rezerwacji&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;strong data-end=&quot;2195&quot; data-start=&quot;2179&quot;&gt;Saga Pattern&lt;/strong&gt;, Outbox, DDD, Event Sourcing&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-7" value="Payment Service Integracja z Stripe/PayPal Idempotent endpoints, circuit breaker" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="230" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-8" value="Flight service Dane o siatce lotów PostgreSQL, temporal validity" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="340" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-9" value="Pricing Service Dynamiczne ceny, yield management PostgreSQL, temporal validity" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="450" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-10" value="Notificationservice Email, SMS Message Queue (Kafka/RabbitMQ), templating" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="560" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-11" value="&lt;div&gt;Customer profile&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Dane pasażerów&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;GDPR-ready, PostgreSQL&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="670" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VJRuH1qxaC6Qky_t1Hv3-12" value="Loyalty Service Mile, poziomy statusów Eventual consistency, CQRS&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="780" width="170" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
