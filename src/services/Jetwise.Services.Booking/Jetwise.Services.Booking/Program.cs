@@ -25,6 +25,11 @@ builder.Configuration
 
 builder.Services.AddSingleton<IMongoClient, MongoClient>(sp =>
 {
+    var user = Environment.GetEnvironmentVariable("MONGO_USER");
+    var pass = Environment.GetEnvironmentVariable("MONGO_PASS");
+    var host = Environment.GetEnvironmentVariable("MONGO_HOST");
+    var connectionString = $"mongodb://{user}:{pass}@{host}:27017/?authSource=admin";
+    builder.Configuration["MongoDbSettings:ConnectionString"] = connectionString;
     var settings = sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
     return new MongoClient(settings.ConnectionString);
 });
