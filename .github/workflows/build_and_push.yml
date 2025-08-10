@@ -50,8 +50,8 @@ jobs:
       - name: Create MongoDB secret from GitHub secrets
         run: |
           sudo kubectl create secret generic mongo-auth-secret \
-            --from-literal=MONGO_INITDB_ROOT_USERNAME=${{ secrets.MONGO_USER }} \
-            --from-literal=MONGO_INITDB_ROOT_PASSWORD=${{ secrets.MONGO_PASS }} \
+            --from-literal=MONGO_USER=${{ secrets.MONGO_USER }} \
+            --from-literal=MONGO_PASS=${{ secrets.MONGO_PASS }} \
             --from-literal=MONGO_HOST=mongo \
             --dry-run=client -o yaml | kubectl apply -f - 
 
