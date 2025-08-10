@@ -29,7 +29,7 @@ namespace Jetwise.Services.Booking.Controllers
             {
                 Id = Guid.NewGuid(),
                 Name = "DocumentName"
-            }));
+            }));  
         }
 
     } 
