@@ -47,6 +47,14 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Create MongoDB secret from GitHub secrets
+        run: |
+          sudo kubectl create secret generic mongo-secret \
+            --from-literal=MONGO_INITDB_ROOT_USERNAME=${{ secrets.MONGO_USER }} \
+            --from-literal=MONGO_INITDB_ROOT_PASSWORD=${{ secrets.MONGO_PASS }} \
+            --from-literal=MONGO_HOST=mongo \
+            --dry-run=client -o yaml | kubectl apply -f - 
+
       - name: Build and push Docker images
         run: |
           for service in booking gateway; 
@@ -83,13 +91,7 @@ jobs:
         env:
           KUBECONFIG: /etc/rancher/k3s/k3s.yaml
 
-      - name: Create MongoDB secret from GitHub secrets
-        run: |
-          sudo kubectl create secret generic mongo-secret \
-            --from-literal=MONGO_INITDB_ROOT_USERNAME=${{ secrets.MONGO_USER }} \
-            --from-literal=MONGO_INITDB_ROOT_PASSWORD=${{ secrets.MONGO_PASS }} \
-            --from-literal=MONGO_HOST=mongo \
-            --dry-run=client -o yaml | kubectl apply -f - 
+
       
       - name: Deploy mongo db
         run: |
