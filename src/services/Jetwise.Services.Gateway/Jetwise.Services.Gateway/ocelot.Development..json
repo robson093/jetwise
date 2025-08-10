@@ -1,0 +1,21 @@
+﻿{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/sampleDocuments",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5099
+                }
+            ],
+            "UpstreamPathTemplate": "/bookings/sampleDocuments",
+            "UpstreamHttpMethod": [
+                "GET"
+            ] 
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5184"
+    }
+}

@@ -18,7 +18,7 @@ namespace Jetwise.Services.Booking.Controllers
 
         [HttpGet(Name = "GetSampleDocuments")] 
         public async Task<IActionResult> Get()
-        {
+        { 
             return Ok(await documentsService.GetAllAsync());
         }
 

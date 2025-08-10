@@ -18,6 +18,22 @@ spec:
           ports:
             - containerPort: 8080
           imagePullPolicy: IfNotPresent
+          env:
+            - name: MongoDbSettings__ConnectionString
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: MongoDbSettings__ConnectionString
+            - name: MongoDbSettings__ConnectionString
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: MongoDbSettings__ConnectionString
+            - name: MongoDbSettings__ConnectionString
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: MongoDbSettings__ConnectionString
 ---
 apiVersion: v1
 kind: Service
