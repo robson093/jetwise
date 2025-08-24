@@ -2,17 +2,29 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
+//w ocelot.json pod 
+// "UpstreamHttpMethod": [
+//"GET"
+//            ]
+//
+//
+//,
+//            "AuthenticationOptions": {
+//    "AuthenticationProviderKey": "Bearer",
+//                "AllowedScopes": []
+//            }
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-{
-    options.Authority = "https://dev-onuukffx52o7o3w3.us.auth0.com/";
-    options.Audience = "https://localhost:5184/";
-});
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//}).AddJwtBearer(options =>
+//{
+//    options.Authority = "https://dev-onuukffx52o7o3w3.us.auth0.com/";
+//    options.Audience = "https://localhost:5184/";
+//});
 
 builder.Services.AddCors(options =>
 options.AddPolicy("JetwiseClient", options2 =>
@@ -51,7 +63,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
 

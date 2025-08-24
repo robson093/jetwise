@@ -12,11 +12,7 @@
             "UpstreamPathTemplate": "/bookings/sampleDocuments",
             "UpstreamHttpMethod": [
                 "GET"
-            ],
-            "AuthenticationOptions": {
-                "AuthenticationProviderKey": "Bearer",
-                "AllowedScopes": []
-            }
+            ]
         }
     ],
     "GlobalConfiguration": {
