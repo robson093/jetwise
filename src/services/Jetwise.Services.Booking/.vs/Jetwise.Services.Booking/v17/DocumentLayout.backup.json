@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\controllers\\sampledocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\controllers\\sampledocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\appsettings,development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\appsettings,development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\controllers\\sampledocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\controllers\\sampledocumentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\services\\sampledocumentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,14 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\settings\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\settings\\mongodbsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|solutionrelative:jetwise.services.booking\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50DAFADE-6E60-490C-9611-8B671BFA3D0F}|Jetwise.Services.Booking\\Jetwise.Services.Booking.csproj|d:\\projects\\sandbox\\jetwise\\jetwise\\src\\services\\jetwise.services.booking\\jetwise.services.booking\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -61,31 +61,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "appsettings,Development.json",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\appsettings,Development.json",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\appsettings,Development.json",
               "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\appsettings,Development.json",
               "RelativeToolTip": "Jetwise.Services.Booking\\appsettings,Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-05T15:33:16.827Z"
+              "WhenOpened": "2025-08-05T15:33:16.827Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MongoDbSettings.cs",
-              "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
-              "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
-              "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
-              "RelativeToolTip": "Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T15:25:35.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SampleDocument.cs",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Domain\\SampleDocument.cs",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Domain\\SampleDocument.cs",
@@ -97,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SampleDocumentsService.cs",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Services\\SampleDocumentsService.cs",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Services\\SampleDocumentsService.cs",
@@ -109,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\WeatherForecast.cs",
@@ -117,24 +106,25 @@
               "RelativeToolTip": "Jetwise.Services.Booking\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T15:20:38.227Z"
+              "WhenOpened": "2025-08-05T15:20:38.227Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\appsettings.json",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\appsettings.json",
               "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\appsettings.json",
               "RelativeToolTip": "Jetwise.Services.Booking\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-05T15:19:40.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Dockerfile",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Dockerfile",
@@ -142,33 +132,46 @@
               "RelativeToolTip": "Jetwise.Services.Booking\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-05T09:28:13.141Z"
+              "WhenOpened": "2025-08-05T09:28:13.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "SampleDocumentsController.cs",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Controllers\\SampleDocumentsController.cs",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Controllers\\SampleDocumentsController.cs",
               "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Controllers\\SampleDocumentsController.cs",
               "RelativeToolTip": "Jetwise.Services.Booking\\Controllers\\SampleDocumentsController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAEwA8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-03T14:46:57.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Program.cs",
               "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Program.cs",
               "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Program.cs",
               "RelativeToolTip": "Jetwise.Services.Booking\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-02T17:11:09.388Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MongoDbSettings.cs",
+              "DocumentMoniker": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
+              "RelativeDocumentMoniker": "Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
+              "ToolTip": "D:\\Projects\\Sandbox\\Jetwise\\jetwise\\src\\services\\Jetwise.Services.Booking\\Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
+              "RelativeToolTip": "Jetwise.Services.Booking\\Settings\\MongoDbSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T15:25:35.774Z"
             },
             {
               "$type": "Document",
