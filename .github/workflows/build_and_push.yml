@@ -64,4 +64,4 @@ jobs:
           kubectl apply -f deploy/services.booking.yaml 
           kubectl apply -f deploy/services.gateway.yaml
         env:
-          KUBECONFIG: /etc/rancher/k3s/k3s.yaml
+          KUBECONFIG: /home/vboxuser/.kube/config
