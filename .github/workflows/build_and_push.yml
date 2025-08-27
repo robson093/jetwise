@@ -13,9 +13,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
       
-      - name: Check user
-        run: whoami
-      
       - name: Set up .NET SDK
         uses: actions/setup-dotnet@v3
         with:
@@ -27,7 +24,6 @@ jobs:
             ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking/Jetwise.Services.Booking.csproj \
             ./src/services/Jetwise.Services.Gateway/Jetwise.Services.Gateway/Jetwise.Services.Gateway.csproj
           do
-            echo "Restoring $proj"
             dotnet restore "$proj"
           done
 
@@ -37,7 +33,6 @@ jobs:
             ./src/services/Jetwise.Services.Booking/Jetwise.Services.Booking/Jetwise.Services.Booking.csproj \
             ./src/services/Jetwise.Services.Gateway/Jetwise.Services.Gateway/Jetwise.Services.Gateway.csproj
           do
-            echo "Building $proj"
             dotnet build "$proj" --configuration Release
           done
 
@@ -47,21 +42,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Create MongoDB secret from GitHub secrets
-        run: |
-          sudo kubectl create secret generic mongo-auth-secret \
-            --from-literal=MONGO_USER=${{ secrets.MONGO_USER }} \
-            --from-literal=MONGO_PASS=${{ secrets.MONGO_PASS }} \
-            --from-literal=MONGO_HOST=mongo \
-            --dry-run=client -o yaml | kubectl apply -f - 
-
       - name: Build and push Docker images
         run: |
-          for service in booking gateway; 
-          do
+          for service in booking gateway; do
             IMAGE_NAME=jetwise.services.$service
             IMAGE_TAG=${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME:${{ github.sha }}
-            
+
             echo "Building $IMAGE_NAME"
             docker build -t $IMAGE_TAG ./src/services/Jetwise.Services.$(tr '[:lower:]' '[:upper:]' <<< ${service:0:1})${service:1}/Jetwise.Services.$(tr '[:lower:]' '[:upper:]' <<< ${service:0:1})${service:1}
 
@@ -72,33 +58,10 @@ jobs:
             sed -i "s|image: .*/$IMAGE_NAME:.*|image: $IMAGE_TAG|" deploy/services.$service.yaml
           done
 
-      # - name: Build Docker image
-      #   run: docker build -t ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }} ./src/services/Jetwise.Services.Booking
-
-      # - name: Push Docker image
-      #   run: docker push ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}
-      
-      - name: Replace image tag in manifest
-        run: |
-          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jetwise.services.booking:${{ github.sha }}|" deploy/services.booking.yaml
-          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jetwise.services.gateway:${{ github.sha }}|" deploy/services.gateway.yaml
-
-      # - name: Show kubeconfig content
-      #   run: sudo cat /etc/rancher/k3s/k3s.yaml
-       
-      - name: Test kubectl cluster-info
-        run: sudo kubectl cluster-info
-        env:
-          KUBECONFIG: /etc/rancher/k3s/k3s.yaml
-
-
-      
-      - name: Deploy mongo db
+      - name: Apply Kubernetes manifests
         run: |
           kubectl apply -f deploy/db.mongo.yaml 
-
-      - name: Deploy with sudo and kubeconfig
-        run: |
           kubectl apply -f deploy/services.booking.yaml 
-          kubectl apply -f deploy/services.gateway.yaml 
-        
+          kubectl apply -f deploy/services.gateway.yaml
+        env:
+          KUBECONFIG: /etc/rancher/k3s/k3s.yaml

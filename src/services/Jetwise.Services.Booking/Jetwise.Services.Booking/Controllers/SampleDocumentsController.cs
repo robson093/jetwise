@@ -1,3 +1,4 @@
+using Jetwise.Services.Booking.Domain;
 using Jetwise.Services.Booking.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,8 +22,12 @@ namespace Jetwise.Services.Booking.Controllers
         [AllowAnonymous]
         [HttpGet(Name = "GetSampleDocuments")] 
         public async Task<IActionResult> Get()
-        { 
-            return Ok(await documentsService.GetAllAsync());
+        {
+            return Ok((await documentsService.GetAllAsync()).Select(x => new SampleDocument()
+            {
+                Id = x.Id,
+                Name = x.Name + "_v2"
+            }));
         }
 
         [AllowAnonymous]
