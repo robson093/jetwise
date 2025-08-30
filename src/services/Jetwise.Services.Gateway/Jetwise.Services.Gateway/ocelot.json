@@ -5,8 +5,8 @@
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "localhost",
-                    "Port": 5099
+                    "Host": "booking-service",
+                    "Port": 80
                 }
             ],
             "UpstreamPathTemplate": "/bookings/sampleDocuments",

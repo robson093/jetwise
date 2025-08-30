@@ -29,6 +29,6 @@ spec:
   ports:
     - protocol: TCP
       port: 80          # zostaje jako zewnętrzny port (może być 80)
-      targetPort: 8080  # musi wskazywać na port aplikacji w kontenerze!
+      targetPort: 80  # musi wskazywać na port aplikacji w kontenerze!
       nodePort: 32306   # tylko jeśli potrzebujesz konkretnego NodePort
   type: NodePort
