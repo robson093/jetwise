@@ -1,23 +1,42 @@
 ﻿@page "/counter"
+@inject IHttpClientFactory HttpClientFactory
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 
 <PageTitle>Counter</PageTitle>
-
 <h1>Counter</h1>
-
 <p role="status">Current count: @currentCount</p>
-
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
+<span class="btn btn-primary" @onclick="IncrementCount">@resp</span>
 @code {
     private int currentCount = 0;
-
+    private string resp { get; set; }
     private async Task IncrementCount()
     {
         currentCount++;
 
-        HttpClient httpClient = new HttpClient();
-        var res = await httpClient.GetAsync("http://jetwisegateway:32305/bookings/sampleDocuments");
-        var xx = await res.Content.ReadAsStringAsync();
-        string aa = "";
+        // HttpClient httpClient = new HttpClient();
+        // var res = await httpClient.GetAsync("http://jetwisegateway:32305/bookings/sampleDocuments");
+        // var xx = await res.Content.ReadAsStringAsync();
+        resp = "start";
+        try
+        {
+            // HttpClient httpClient = new HttpClient();
+            // var reee = await httpClient.GetAsync("http://localhost:5184/api/values/testy");
+            // Console.WriteLine("poszlo");
+
+
+             var client = HttpClientFactory.CreateClient("GatewayAPI");
+            // var res = await client.GetAsync("/api/values/testyauth");
+            // Console.WriteLine(await res.Content.ReadAsStringAsync());
+
+             var res = await client.GetAsync("/bookings/sampleDocuments"); 
+            resp = await res.Content.ReadAsStringAsync();
+            
+        }
+        catch (Exception ex)
+        { 
+            resp = ex.Message;
+        } 
     }
 }

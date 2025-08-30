@@ -19,38 +19,43 @@ namespace Jetwise.Services.Booking.Controllers
             this.documentsService = documentsService;
         }
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpGet(Name = "GetSampleDocuments")] 
         public async Task<IActionResult> Get()
         {
+            //   Console.WriteLine(User.FindFirst("sub")?.Value);
+            //Console.WriteLine(User.FindFirst("sub")?.Value);
+            //  var xxxxx =   User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            //    Console.WriteLine(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value);
+            //return Ok("bookings works!");
             return Ok((await documentsService.GetAllAsync()).Select(x => new SampleDocument()
             {
                 Id = x.Id,
-                Name = x.Name + "_v2"
+                Name = x.Name + "_v3_" + User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value
             }));
         }
 
-        [AllowAnonymous]
-        [HttpPost(Name = "CreateSampleDocument")]
-        public async Task<IActionResult> Create()
-        {
-            return Ok(await documentsService.CreateDocumentAsync(new Domain.SampleDocument
-            {
-                Id = Guid.NewGuid(),
-                Name = "DocumentName"
-            }));  
-        }
+        //[AllowAnonymous]
+        //[HttpPost(Name = "CreateSampleDocument")]
+        //public async Task<IActionResult> Create()
+        //{
+        //    return Ok(await documentsService.CreateDocumentAsync(new Domain.SampleDocument
+        //    {
+        //        Id = Guid.NewGuid(),
+        //        Name = "DocumentName"
+        //    }));  
+        //}
          
-        [HttpPost(Name = "GetAuthorizedUser")]
-        [Route("user")]
-        public async Task<IActionResult> GetUser()
-        {
-            Console.WriteLine( Request.Headers.Authorization.First().Split(' ').Last());
-            Console.WriteLine(User.FindFirst("sub")?.Value);
-            Console.WriteLine(User.FindFirst("sub")?.Value);
-            Console.WriteLine(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value);
+        //[HttpPost(Name = "GetAuthorizedUser")]
+        //[Route("user")]
+        //public async Task<IActionResult> GetUser()
+        //{
+        //    Console.WriteLine( Request.Headers.Authorization.First().Split(' ').Last());
+        //    Console.WriteLine(User.FindFirst("sub")?.Value);
+        //    Console.WriteLine(User.FindFirst("sub")?.Value);
+        //    Console.WriteLine(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value);
 
-            return Ok(Request.HttpContext.User.Claims.Select(x=>$"{x.Subject} {x.Value}"));
-        }
+        //    return Ok(Request.HttpContext.User.Claims.Select(x=>$"{x.Subject} {x.Value}"));
+        //}
     } 
 }

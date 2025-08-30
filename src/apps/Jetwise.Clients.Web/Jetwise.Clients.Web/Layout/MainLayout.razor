@@ -1,16 +1,37 @@
 ﻿@inherits LayoutComponentBase
+@inject IHttpClientFactory HttpClientFactory
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+	<AuthorizeView>
+		<Authorized>
+			<div class="sidebar">
+				<NavMenu />
+			</div>
+		</Authorized>
+	</AuthorizeView>
+	
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+	<main>
+		<div class="top-row px-4">
+			<AuthorizeView>
+				<Authorized>
+					<span>@context.User.Identity?.Name!</span>
+					<a href="authentication/logout">Wyloguj</a>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+				</Authorized>
+				<NotAuthorized>
+					<a href="authentication/login">Zaloguj</a>
+				</NotAuthorized>
+				<Authorizing>
+					<span>⏳ Sprawdzanie stanu logowania...</span>
+				</Authorizing>
+			</AuthorizeView>
+		</div>
+
+		<article class="content px-4">
+			@Body
+		</article>
+	</main>
 </div>

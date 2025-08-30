@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -16,36 +16,35 @@ using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//}).AddJwtBearer(options =>
-//{
-//    options.Authority = "https://dev-onuukffx52o7o3w3.us.auth0.com/";
-//    options.Audience = "https://localhost:5184/";
-//});
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.Authority = "https://dev-onuukffx52o7o3w3.us.auth0.com/";
+    options.Audience = "https://jetwise-gateway/";
+});
 
 builder.Services.AddCors(options =>
-options.AddPolicy("JetwiseClient", options2 =>
-options2 
-.AllowAnyHeader()
-.AllowAnyOrigin()
-.AllowAnyMethod()));
+options.AddPolicy("JetwiseClient", p =>
+ p//.WithOrigins("https://127.0.0.1:7289") // SPA origin
+ .AllowAnyOrigin()
+     .AllowAnyHeader()
+     .AllowAnyMethod()
+     //.AllowCredentials()
+     ));
 
 // Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers(); 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
-
+ 
 builder.Configuration
     .SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
-    .AddJsonFile($"ocelot.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
+    //.AddJsonFile($"ocelot.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables(); 
 builder.Services.AddOcelot();
 
@@ -62,10 +61,13 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
-
-//app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
 await app.UseOcelot();
+
+ 
+
 app.Run();

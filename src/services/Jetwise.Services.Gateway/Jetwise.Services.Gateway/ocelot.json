@@ -5,17 +5,21 @@
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "booking-service",
-                    "Port": 80
+                    "Host": "localhost",
+                    "Port": 5099
                 }
             ],
             "UpstreamPathTemplate": "/bookings/sampleDocuments",
             "UpstreamHttpMethod": [
                 "GET"
-            ]
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
         }
     ],
     "GlobalConfiguration": {
-        "BaseUrl": "https://localhost:5184"
+        "BaseUrl": "https://192.168.1.92:32305"
     }
 }
