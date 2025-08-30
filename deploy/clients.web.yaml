@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web-client
-          image: robson93/jetwise.web-client:latest
+          image: robson93/jetwise.clients.web:latest
           ports:
             - containerPort: 8080
           imagePullPolicy: IfNotPresent
