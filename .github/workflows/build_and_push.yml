@@ -78,8 +78,7 @@ jobs:
 
       - name: Apply Kubernetes manifests
         run: |
-          for package in db.mongo.yaml services.booking.yaml services.gateway.yaml clients.web.yaml; do
-            kubectl apply -f $package
-          done 
+          for package in db.mongo services.booking services.gateway clients.web; do
+          kubectl apply -f deploy/$package.yaml
         env:
           KUBECONFIG: /home/vboxuser/.kube/config
