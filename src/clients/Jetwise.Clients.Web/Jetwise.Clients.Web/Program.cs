@@ -20,7 +20,8 @@ builder.Services.AddOidcAuthentication(options =>
     options.ProviderOptions.DefaultScopes.Add("profile");
     options.ProviderOptions.DefaultScopes.Add("email");
     options.ProviderOptions.DefaultScopes.Add("offline_access");
-    options.ProviderOptions.RedirectUri = "https://127.0.0.1:7289/authentication/login-callback";
+    //options.ProviderOptions.RedirectUri = "https://127.0.0.1:7289/authentication/login-callback";
+    options.ProviderOptions.RedirectUri = "https://blazor.local/authentication/login-callback";
     // ⬇ to jest kluczowe dla dostępu do Twojego API (Audience)
     options.ProviderOptions.AdditionalProviderParameters.Add("audience", "https://jetwise-gateway/"); 
 });
