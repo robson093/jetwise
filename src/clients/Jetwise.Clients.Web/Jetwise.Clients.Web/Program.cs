@@ -42,7 +42,7 @@ builder.Services.AddScoped<AuthorizationMessageHandler>(sp =>
 
 builder.Services.AddHttpClient("GatewayAPI", client =>
 {
-    client.BaseAddress = new Uri("http://gateway-service");
+    client.BaseAddress = new Uri("http://gateway-service"); 
 })
 .AddHttpMessageHandler<AuthorizationMessageHandler>();
 
