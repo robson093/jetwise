@@ -34,7 +34,7 @@ builder.Services.AddScoped<AuthorizationMessageHandler>(sp =>
         sp.GetRequiredService<NavigationManager>()
     );
     handler.ConfigureHandler(
-        authorizedUrls: new[] { "https://localhost:5184" }
+        authorizedUrls: new[] { "https://localhost:5184" }//adresy do któych będą dokładane tokeny autoryzacji
         //,scopes: new[] { "bookings:read", "bookings:write" } // czego potrzebujesz
     );
     return handler;
