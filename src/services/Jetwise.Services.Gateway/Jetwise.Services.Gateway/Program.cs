@@ -66,7 +66,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-await app.UseOcelot();
+//await app.UseOcelot();
 
  
 
