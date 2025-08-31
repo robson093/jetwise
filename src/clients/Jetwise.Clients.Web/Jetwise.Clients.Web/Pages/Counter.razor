@@ -23,7 +23,7 @@
         {
              HttpClient httpClient = new HttpClient();
 
-             var reee = await httpClient.GetAsync("https://blazor.local/api/values/testy");
+            var reee = await httpClient.GetAsync("https://blazor.local/api/bookings/sampleDocuments");
             resp = await reee.Content.ReadAsStringAsync();
             // Console.WriteLine("poszlo");
 
