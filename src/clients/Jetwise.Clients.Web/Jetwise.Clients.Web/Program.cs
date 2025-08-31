@@ -34,7 +34,7 @@ builder.Services.AddScoped<AuthorizationMessageHandler>(sp =>
         sp.GetRequiredService<NavigationManager>()
     );
     handler.ConfigureHandler(
-        authorizedUrls: new[] { "https://localhost:5184" }//adresy do któych będą dokładane tokeny autoryzacji
+        authorizedUrls: new[] { "http://gateway-service" }//adresy do któych będą dokładane tokeny autoryzacji
         //,scopes: new[] { "bookings:read", "bookings:write" } // czego potrzebujesz
     );
     return handler;
@@ -42,7 +42,7 @@ builder.Services.AddScoped<AuthorizationMessageHandler>(sp =>
 
 builder.Services.AddHttpClient("GatewayAPI", client =>
 {
-    client.BaseAddress = new Uri("https://localhost:5184");
+    client.BaseAddress = new Uri("http://gateway-service");
 })
 .AddHttpMessageHandler<AuthorizationMessageHandler>();
 
