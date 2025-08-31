@@ -21,17 +21,19 @@
         resp = "start";
         try
         {
-            // HttpClient httpClient = new HttpClient();
-            // var reee = await httpClient.GetAsync("http://localhost:5184/api/values/testy");
+             HttpClient httpClient = new HttpClient();
+
+             var reee = await httpClient.GetAsync("http://blazor.local:32305/api/values/testy");
+            resp = await reee.Content.ReadAsStringAsync();
             // Console.WriteLine("poszlo");
 
 
-             var client = HttpClientFactory.CreateClient("GatewayAPI");
+            // var client = HttpClientFactory.CreateClient("GatewayAPI");
             // var res = await client.GetAsync("/api/values/testyauth");
             // Console.WriteLine(await res.Content.ReadAsStringAsync());
-            var res = await client.GetAsync("/api/values/testyauth");
+           // var res = await client.GetAsync("/api/values/testyauth");
              //var res = await client.GetAsync("/bookings/sampleDocuments"); 
-            resp = await res.Content.ReadAsStringAsync();
+            //resp = await res.Content.ReadAsStringAsync();
             
         }
         catch (Exception ex)
